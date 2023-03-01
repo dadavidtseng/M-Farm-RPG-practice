@@ -61,6 +61,10 @@ public class ItemEditor : EditorWindow
         itemDetailsScetion = root.Q<ScrollView>("ItemDetails");
         iconPreview = itemDetailsScetion.Q<VisualElement>("Icon");
         
+        //獲得按鍵
+        root.Q<Button>("AddButton").clicked += OnAddButtonClicked;
+        root.Q<Button>("DeleteButton").clicked += OnDeleteButtonClicked;
+        
         //加載數據
         LoadDataBase();
         
@@ -68,6 +72,24 @@ public class ItemEditor : EditorWindow
         GenerateListView();
     }
 
+    #region 按鍵事件
+    private void OnDeleteButtonClicked()
+    {
+        itemList.Remove(activeItem);
+        itemListView.Rebuild();
+        itemDetailsScetion.visible = false;
+    }
+
+    private void OnAddButtonClicked()
+    {
+        ItemDetails newItem = new ItemDetails();
+        newItem.itemName = "NEW ITEM";
+        newItem.itemID = 1000 + itemList.Count;
+        itemList.Add(newItem);
+        itemListView.Rebuild();
+    }
+    #endregion
+    
     private void LoadDataBase()
     {
         var dataArray = AssetDatabase.FindAssets("ItemDataList_SO");
