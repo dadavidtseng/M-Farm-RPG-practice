@@ -17,5 +17,19 @@ namespace MFarm.Inventory
         {
             return itemDataList_SO.itemDetailsList.Find(i => i.itemID == ID);
         }
+
+        /// <summary>
+        /// 添加物品到Player背包裡
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="toDestroy">是否要銷毀物品</param>
+        public void AddItem(Item item, bool toDestroy)
+        {
+            Debug.Log(GetItemDetails(item.itemID).itemID + "Name: " + GetItemDetails(item.itemID).itemName);
+            if (toDestroy)
+            {
+                Destroy(item.gameObject);
+            }
+        }
     }
 }
