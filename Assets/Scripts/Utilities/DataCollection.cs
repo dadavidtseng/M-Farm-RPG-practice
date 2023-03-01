@@ -1,7 +1,6 @@
 using UnityEngine;
 
 [System.Serializable]
-
 public class ItemDetails
 {
     public int itemID;
@@ -17,4 +16,11 @@ public class ItemDetails
     public int itemPrice;
     [Range(0, 1)]
     public float sellPercentage;
+}
+
+[System.Serializable]
+public struct InventoryItem
+{
+    public int itemID;
+    public int itemAmount;
 }
