@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 
 public class ItemEditor : EditorWindow
@@ -11,6 +12,13 @@ public class ItemEditor : EditorWindow
     private ItemDataList_SO dataBase;
     private List<ItemDetails> itemList = new List<ItemDetails>();
     private VisualTreeAsset itemRowTemplate;
+    private ScrollView itemDetailsScetion;
+    private ItemDetails activeItem;
+
+    //默認預覽圖片
+    private Sprite defaultIcon;
+    
+    private VisualElement iconPreview;
     
     //獲得VisualElement
     private ListView itemListView;
@@ -45,9 +53,13 @@ public class ItemEditor : EditorWindow
         
         //拿到模板數據
         itemRowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UI Builder/ItemRowTemplate.uxml");
+
+        defaultIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/M Studio/Art/Items/Icons/icon_M.png");
         
         //變量賦值
         itemListView = root.Q<VisualElement>("ItemList").Q<ListView>("ListView");
+        itemDetailsScetion = root.Q<ScrollView>("ItemDetails");
+        iconPreview = itemDetailsScetion.Q<VisualElement>("Icon");
         
         //加載數據
         LoadDataBase();
@@ -93,5 +105,48 @@ public class ItemEditor : EditorWindow
         itemListView.itemsSource = itemList;
         itemListView.makeItem = makeItem;
         itemListView.bindItem = bindItem;
+
+        itemListView.onSelectionChange += OnListSecectionChange;
+        
+        //右側信息面板不可見
+        itemDetailsScetion.visible = false;
+    }
+
+    private void OnListSecectionChange(IEnumerable<object> selectedItem)
+    {
+        activeItem = selectedItem.First() as ItemDetails;
+        GetItemDeatils();
+        itemDetailsScetion.visible = true;
+    }
+
+    private void GetItemDeatils()
+    {
+        itemDetailsScetion.MarkDirtyRepaint();
+
+        itemDetailsScetion.Q<IntegerField>("ItemID").value = activeItem.itemID;
+        itemDetailsScetion.Q<IntegerField>("ItemID").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemID = evt.newValue;
+        });
+
+        itemDetailsScetion.Q<TextField>("ItemName").value = activeItem.itemName;
+        itemDetailsScetion.Q<TextField>("ItemName").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemName = evt.newValue;
+            itemListView.Rebuild();
+        });
+
+        iconPreview.style.backgroundImage = activeItem.itemIcon == null ? defaultIcon.texture : activeItem.itemIcon.texture;
+        itemDetailsScetion.Q<ObjectField>("ItemIcon").value = activeItem.itemIcon;
+        itemDetailsScetion.Q<ObjectField>("ItemIcon").RegisterValueChangedCallback(evt =>
+        {
+            Sprite newIcon = evt.newValue as Sprite;
+            activeItem.itemIcon = newIcon;
+
+
+            iconPreview.style.backgroundImage = newIcon == null ? defaultIcon.texture : newIcon.texture;
+            
+            itemListView.Rebuild();
+        });
     }
 }
