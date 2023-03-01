@@ -53,7 +53,7 @@ public class ItemEditor : EditorWindow
         
         //拿到模板數據
         itemRowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UI Builder/ItemRowTemplate.uxml");
-
+        //拿默認Icon圖片
         defaultIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/M Studio/Art/Items/Icons/icon_M.png");
         
         //變量賦值
@@ -93,7 +93,8 @@ public class ItemEditor : EditorWindow
     private void LoadDataBase()
     {
         var dataArray = AssetDatabase.FindAssets("ItemDataList_SO");
-
+        //var dataArray = AssetDatabase.FindAssets("t:ItemDataList_SO");    //不同版本寫法不一樣
+        //if (dataArray.Length >= 1)    //不同版本寫法不一樣
         if (dataArray.Length > 1)
         {
             var path = AssetDatabase.GUIDToAssetPath(dataArray[0]);
@@ -118,12 +119,11 @@ public class ItemEditor : EditorWindow
                 {
                     e.Q<VisualElement>("Icon").style.backgroundImage = itemList[i].itemIcon.texture;
                 }
-
                 e.Q<Label>("Name").text = itemList[i] == null ? "NO ITEm" : itemList[i].itemName;
             }
         };
 
-        itemListView.fixedItemHeight = 60;
+        itemListView.fixedItemHeight = 60;  //根據需要高度調整數值
         itemListView.itemsSource = itemList;
         itemListView.makeItem = makeItem;
         itemListView.bindItem = bindItem;
@@ -169,6 +169,62 @@ public class ItemEditor : EditorWindow
             iconPreview.style.backgroundImage = newIcon == null ? defaultIcon.texture : newIcon.texture;
             
             itemListView.Rebuild();
+        });
+        
+        //其他所有變量的綁定
+        itemDetailsScetion.Q<ObjectField>("ItemSprite").value = activeItem.itemOnWorldSprite;
+        itemDetailsScetion.Q<ObjectField>("ItemSprite").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemOnWorldSprite = evt.newValue as Sprite;
+        });
+        
+        itemDetailsScetion.Q<EnumField>("ItemType").Init(activeItem.itemType);
+        itemDetailsScetion.Q<EnumField>("ItemType").value = activeItem.itemType;
+        itemDetailsScetion.Q<EnumField>("ItemType").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemType = (ItemType)evt.newValue;
+        });
+
+        itemDetailsScetion.Q<IntegerField>("ItemUseRadius").value = activeItem.itemUseRadius;
+        itemDetailsScetion.Q<IntegerField>("ItemUseRadius").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemUseRadius = evt.newValue;
+        });
+
+        itemDetailsScetion.Q<Toggle>("canPickUp").value = activeItem.canPickup;
+        itemDetailsScetion.Q<Toggle>("canPickUp").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.canPickup = evt.newValue;
+        });
+        
+        itemDetailsScetion.Q<Toggle>("canDropped").value = activeItem.canDropped;
+        itemDetailsScetion.Q<Toggle>("canDropped").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.canDropped = evt.newValue;
+        });
+        
+        itemDetailsScetion.Q<Toggle>("canCarried").value = activeItem.canCarried;
+        itemDetailsScetion.Q<Toggle>("canCarried").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.canCarried = evt.newValue;
+        });
+
+        itemDetailsScetion.Q<IntegerField>("Price").value = activeItem.itemPrice;
+        itemDetailsScetion.Q<IntegerField>("Price").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemPrice = evt.newValue;
+        });
+
+        itemDetailsScetion.Q<Slider>("SellPercentage").value = activeItem.sellPercentage;
+        itemDetailsScetion.Q<Slider>("SellPercentage").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.sellPercentage = evt.newValue;
+        });
+
+        itemDetailsScetion.Q<TextField>("Description").value = activeItem.itemDescription;
+        itemDetailsScetion.Q<TextField>("Description").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemDescription = evt.newValue;
         });
     }
 }
