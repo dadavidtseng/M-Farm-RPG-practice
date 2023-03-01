@@ -12,7 +12,7 @@ public class ItemEditor : EditorWindow
     private ItemDataList_SO dataBase;
     private List<ItemDetails> itemList = new List<ItemDetails>();
     private VisualTreeAsset itemRowTemplate;
-    private ScrollView itemDetailsScetion;
+    private ScrollView itemDetailsSection;
     private ItemDetails activeItem;
 
     //默認預覽圖片
@@ -58,8 +58,8 @@ public class ItemEditor : EditorWindow
         
         //變量賦值
         itemListView = root.Q<VisualElement>("ItemList").Q<ListView>("ListView");
-        itemDetailsScetion = root.Q<ScrollView>("ItemDetails");
-        iconPreview = itemDetailsScetion.Q<VisualElement>("Icon");
+        itemDetailsSection = root.Q<ScrollView>("ItemDetails");
+        iconPreview = itemDetailsSection.Q<VisualElement>("Icon");
         
         //獲得按鍵
         root.Q<Button>("AddButton").clicked += OnAddButtonClicked;
@@ -77,7 +77,7 @@ public class ItemEditor : EditorWindow
     {
         itemList.Remove(activeItem);
         itemListView.Rebuild();
-        itemDetailsScetion.visible = false;
+        itemDetailsSection.visible = false;
     }
 
     private void OnAddButtonClicked()
@@ -128,41 +128,41 @@ public class ItemEditor : EditorWindow
         itemListView.makeItem = makeItem;
         itemListView.bindItem = bindItem;
 
-        itemListView.onSelectionChange += OnListSecectionChange;
+        itemListView.onSelectionChange += OnListSelectionChange;
         
         //右側信息面板不可見
-        itemDetailsScetion.visible = false;
+        itemDetailsSection.visible = false;
     }
 
-    private void OnListSecectionChange(IEnumerable<object> selectedItem)
+    private void OnListSelectionChange(IEnumerable<object> selectedItem)
     {
-        activeItem = selectedItem.First() as ItemDetails;
+        activeItem = (ItemDetails)selectedItem.First();
         GetItemDeatils();
-        itemDetailsScetion.visible = true;
+        itemDetailsSection.visible = true;
     }
 
     private void GetItemDeatils()
     {
-        itemDetailsScetion.MarkDirtyRepaint();
+        itemDetailsSection.MarkDirtyRepaint();
 
-        itemDetailsScetion.Q<IntegerField>("ItemID").value = activeItem.itemID;
-        itemDetailsScetion.Q<IntegerField>("ItemID").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<IntegerField>("ItemID").value = activeItem.itemID;
+        itemDetailsSection.Q<IntegerField>("ItemID").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemID = evt.newValue;
         });
 
-        itemDetailsScetion.Q<TextField>("ItemName").value = activeItem.itemName;
-        itemDetailsScetion.Q<TextField>("ItemName").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<TextField>("ItemName").value = activeItem.itemName;
+        itemDetailsSection.Q<TextField>("ItemName").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemName = evt.newValue;
             itemListView.Rebuild();
         });
 
         iconPreview.style.backgroundImage = activeItem.itemIcon == null ? defaultIcon.texture : activeItem.itemIcon.texture;
-        itemDetailsScetion.Q<ObjectField>("ItemIcon").value = activeItem.itemIcon;
-        itemDetailsScetion.Q<ObjectField>("ItemIcon").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<ObjectField>("ItemIcon").value = activeItem.itemIcon;
+        itemDetailsSection.Q<ObjectField>("ItemIcon").RegisterValueChangedCallback(evt =>
         {
-            Sprite newIcon = evt.newValue as Sprite;
+            Sprite newIcon = (Sprite)evt.newValue;
             activeItem.itemIcon = newIcon;
 
 
@@ -172,57 +172,57 @@ public class ItemEditor : EditorWindow
         });
         
         //其他所有變量的綁定
-        itemDetailsScetion.Q<ObjectField>("ItemSprite").value = activeItem.itemOnWorldSprite;
-        itemDetailsScetion.Q<ObjectField>("ItemSprite").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<ObjectField>("ItemSprite").value = activeItem.itemOnWorldSprite;
+        itemDetailsSection.Q<ObjectField>("ItemSprite").RegisterValueChangedCallback(evt =>
         {
-            activeItem.itemOnWorldSprite = evt.newValue as Sprite;
+            activeItem.itemOnWorldSprite = (Sprite)evt.newValue;
         });
         
-        itemDetailsScetion.Q<EnumField>("ItemType").Init(activeItem.itemType);
-        itemDetailsScetion.Q<EnumField>("ItemType").value = activeItem.itemType;
-        itemDetailsScetion.Q<EnumField>("ItemType").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<EnumField>("ItemType").Init(activeItem.itemType);
+        itemDetailsSection.Q<EnumField>("ItemType").value = activeItem.itemType;
+        itemDetailsSection.Q<EnumField>("ItemType").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemType = (ItemType)evt.newValue;
         });
 
-        itemDetailsScetion.Q<IntegerField>("ItemUseRadius").value = activeItem.itemUseRadius;
-        itemDetailsScetion.Q<IntegerField>("ItemUseRadius").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<IntegerField>("ItemUseRadius").value = activeItem.itemUseRadius;
+        itemDetailsSection.Q<IntegerField>("ItemUseRadius").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemUseRadius = evt.newValue;
         });
 
-        itemDetailsScetion.Q<Toggle>("canPickUp").value = activeItem.canPickup;
-        itemDetailsScetion.Q<Toggle>("canPickUp").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<Toggle>("canPickUp").value = activeItem.canPickup;
+        itemDetailsSection.Q<Toggle>("canPickUp").RegisterValueChangedCallback(evt =>
         {
             activeItem.canPickup = evt.newValue;
         });
         
-        itemDetailsScetion.Q<Toggle>("canDropped").value = activeItem.canDropped;
-        itemDetailsScetion.Q<Toggle>("canDropped").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<Toggle>("canDropped").value = activeItem.canDropped;
+        itemDetailsSection.Q<Toggle>("canDropped").RegisterValueChangedCallback(evt =>
         {
             activeItem.canDropped = evt.newValue;
         });
         
-        itemDetailsScetion.Q<Toggle>("canCarried").value = activeItem.canCarried;
-        itemDetailsScetion.Q<Toggle>("canCarried").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<Toggle>("canCarried").value = activeItem.canCarried;
+        itemDetailsSection.Q<Toggle>("canCarried").RegisterValueChangedCallback(evt =>
         {
             activeItem.canCarried = evt.newValue;
         });
 
-        itemDetailsScetion.Q<IntegerField>("Price").value = activeItem.itemPrice;
-        itemDetailsScetion.Q<IntegerField>("Price").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<IntegerField>("Price").value = activeItem.itemPrice;
+        itemDetailsSection.Q<IntegerField>("Price").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemPrice = evt.newValue;
         });
 
-        itemDetailsScetion.Q<Slider>("SellPercentage").value = activeItem.sellPercentage;
-        itemDetailsScetion.Q<Slider>("SellPercentage").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<Slider>("SellPercentage").value = activeItem.sellPercentage;
+        itemDetailsSection.Q<Slider>("SellPercentage").RegisterValueChangedCallback(evt =>
         {
             activeItem.sellPercentage = evt.newValue;
         });
 
-        itemDetailsScetion.Q<TextField>("Description").value = activeItem.itemDescription;
-        itemDetailsScetion.Q<TextField>("Description").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<TextField>("Description").value = activeItem.itemDescription;
+        itemDetailsSection.Q<TextField>("Description").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemDescription = evt.newValue;
         });

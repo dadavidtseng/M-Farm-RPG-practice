@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218306f9-b79d-41b3-ab9f-25c4a382e9b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Item.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Item/ItemBase.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Item/ItemBase.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Item/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Item/Item.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Logic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Logic/InventoryManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Logic/InventoryManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Singleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Singleton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/UI Builder/ItemEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/UI Builder/ItemEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameData/Inventory/ItemDataList_SO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Inventory/ItemDataList_SO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M Studio/Art/Items/Icons/icon_GrapeSeed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M Studio/Art/Items/Icons/icon_GrapeSeed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01.Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01.Field.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +30,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Editor/UI Builder/ItemEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/M Studio/Colourful Hierarchy Category GameObject/Editor/StyleHierarchy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Data SO/ItemDataList_SO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/TriggerItemFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/DataCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/SwitchBounds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/SpriteFrameModule/SpriteFrameModuleBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaletteUtility.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,7 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;RiderCSharpLiveTemplatesSettingsId&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -112,6 +128,7 @@
       <workItem from="1677515690381" duration="256000" />
       <workItem from="1677515955831" duration="310000" />
       <workItem from="1677516313669" duration="3978000" />
+      <workItem from="1677673571294" duration="3084000" />
     </task>
     <servers />
   </component>
@@ -135,5 +152,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
