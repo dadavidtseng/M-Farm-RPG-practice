@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="218306f9-b79d-41b3-ab9f-25c4a382e9b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01.Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01.Field.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Logic/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Logic/InventoryManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -116,7 +117,7 @@
       <workItem from="1677515955831" duration="310000" />
       <workItem from="1677516313669" duration="3978000" />
       <workItem from="1677673571294" duration="5635000" />
-      <workItem from="1677728249249" duration="2854000" />
+      <workItem from="1677728249249" duration="3191000" />
     </task>
     <servers />
   </component>
