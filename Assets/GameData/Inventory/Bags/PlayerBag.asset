@@ -15,6 +15,18 @@ MonoBehaviour:
   itemList:
   - itemID: 1005
     itemAmount: 1
+  - itemID: 1003
+    itemAmount: 1
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
   - itemID: 0
     itemAmount: 0
   - itemID: 0

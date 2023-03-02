@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ namespace MFarm.Inventory
     {
         [Header("物品數據")] public ItemDataList_SO itemDataList_SO;
         [Header("背包數據")] public InventoryBag_SO playerBag;
+
+        private void Start()
+        {
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
+        }
 
         /// <summary>
         /// 通過ID返回物品信息
@@ -36,6 +42,9 @@ namespace MFarm.Inventory
             {
                 Destroy(item.gameObject);
             }
+            
+            //更新UI
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, playerBag.itemList);
         }
 
         /// <summary>

@@ -143,6 +143,7 @@ MonoBehaviour:
   button: {fileID: 3492747867909011500}
   slotType: 0
   isSelected: 0
+  slotIndex: 0
   itemDetails:
     itemID: 0
     itemName: 
