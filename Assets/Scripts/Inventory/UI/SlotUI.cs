@@ -122,17 +122,17 @@ namespace MFarm.Inventory
                 //清空所有高亮顯示
                 inventoryUI.UpdatesSlotHighlight(-1);   //測試扔在地上
             }
-            // else   //測試扔在地上
-            // {
-            //     if (itemDetails.canDropped)
-            //     {
-            //         //屬標對應世界地圖座標
-            //         var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
-            //             -Camera.main.transform.position.z));
-            //     
-            //         EventHandler.CallInstantiateItemInScene(itemDetails.itemID, pos);
-            //     }
-            // }
+            else   //測試扔在地上
+            {
+                if (itemDetails.canDropped)
+                {
+                    //鼠標對應世界地圖座標
+                    var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
+                        -Camera.main.transform.position.z));
+                
+                    EventHandler.CallInstantiateItemInScene(itemDetails.itemID, pos);
+                }
+            }
         }
     }
 }
