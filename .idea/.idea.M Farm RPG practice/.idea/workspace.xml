@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218306f9-b79d-41b3-ab9f-25c4a382e9b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Arm.overrideController" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Arm.overrideController.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/BaseController.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/BaseController.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Body.overrideController" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Body.overrideController.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Hair.overrideController" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Hair.overrideController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Arm_Hold.overrideController" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Arm_Hold.overrideController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimatorOverride.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimatorOverride.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/SlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/SlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/DataCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/DataCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/EventHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI/ItemToolTip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI/ShowItemToolTip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI/SlotUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/AnimatorOverride.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/TriggerItemFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/DataCollection.cs" root0="FORCE_HIGHLIGHTING" />

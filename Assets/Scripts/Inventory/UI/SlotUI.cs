@@ -73,6 +73,11 @@ namespace MFarm.Inventory
             isSelected = !isSelected;
             
             inventoryUI.UpdatesSlotHighlight(slotIndex);
+
+            if (slotType == SlotType.Bag)
+            {
+                EventHandler.CallItemSelectedEvent(itemDetails, isSelected);
+            }
         }
 
         public void OnBeginDrag(PointerEventData eventData)

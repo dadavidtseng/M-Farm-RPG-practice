@@ -94,6 +94,6 @@ MonoBehaviour:
     itemUseRadius: 2
     canPickup: 1
     canDropped: 1
-    canCarried: 1
+    canCarried: 0
     itemPrice: 0
     sellPercentage: 0
