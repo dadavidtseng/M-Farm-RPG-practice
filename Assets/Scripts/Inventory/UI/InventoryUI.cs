@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +5,10 @@ namespace MFarm.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        [Header("玩家背包UI")] 
+        [SerializeField] private GameObject bagUI;
+        private bool bagOpened;
+        
         [SerializeField] private SlotUI[] playerSlots;
 
         private void OnEnable()
@@ -26,8 +28,18 @@ namespace MFarm.Inventory
             {
                 playerSlots[i].slotIndex = i;
             }
+
+            bagOpened = bagUI.activeInHierarchy;
         }
-        
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                OpenBagUI();
+            }
+        }
+
         private void OnUpdateInventoryUI(InventoryLocation location, List<InventoryItem> list)
         {
             switch (location)
@@ -47,6 +59,13 @@ namespace MFarm.Inventory
                     }
                     break;
             }
+        }
+
+        public void OpenBagUI()
+        {
+            bagOpened = !bagOpened;
+            
+            bagUI.SetActive(bagOpened);
         }
     }
 }
