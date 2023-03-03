@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218306f9-b79d-41b3-ab9f-25c4a382e9b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/ItemToolTip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/ItemToolTip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/ShowItemToolTip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/ShowItemToolTip.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Arm.overrideController" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Arm.overrideController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/BaseController.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/BaseController.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Body.overrideController" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Body.overrideController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Hair.overrideController" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/Player/Hair.overrideController.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory/Slot_Bag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory/Slot_Bag.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/InventoryUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
