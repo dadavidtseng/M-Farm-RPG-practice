@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 
 namespace MFarm.Inventory
 {
-    public class SlotUI : MonoBehaviour, IPointerClickHandler
+    public class SlotUI : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         [Header("組件獲取")] 
         [SerializeField] private Image slotImage;
         [SerializeField] private TextMeshProUGUI amountText;
-        [SerializeField] public Image slotHightlight;
+        [SerializeField] public Image slotHighlight;
         [SerializeField] private Button button;
 
         [Header("格子類型")] 
@@ -72,7 +72,32 @@ namespace MFarm.Inventory
             }
             isSelected = !isSelected;
             
-            inventoryUI.UpdatesSlotHightlight(slotIndex);
+            inventoryUI.UpdatesSlotHighlight(slotIndex);
+        }
+
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            if (itemAmount != 0)
+            {
+                inventoryUI.dragItem.enabled = true;
+                inventoryUI.dragItem.sprite = slotImage.sprite;
+                inventoryUI.dragItem.SetNativeSize();
+                
+                isSelected = true;
+                inventoryUI.UpdatesSlotHighlight(slotIndex);
+            }
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+            inventoryUI.dragItem.transform.position = Input.mousePosition;
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            inventoryUI.dragItem.enabled = false;
+            
+            Debug.Log(eventData.pointerCurrentRaycast.gameObject);
         }
     }
 }

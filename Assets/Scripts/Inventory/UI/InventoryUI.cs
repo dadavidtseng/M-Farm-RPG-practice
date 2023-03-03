@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MFarm.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        [Header("拖拽圖片")] 
+        public Image dragItem;
+        
         [Header("玩家背包UI")] 
         [SerializeField] private GameObject bagUI;
         private bool bagOpened;
@@ -75,18 +79,18 @@ namespace MFarm.Inventory
         /// 更新高亮顯示
         /// </summary>
         /// <param name="index">序號</param>
-        public void UpdatesSlotHightlight(int index)
+        public void UpdatesSlotHighlight(int index)
         {
             foreach (var slot in playerSlots)
             {
                 if (slot.isSelected && slot.slotIndex == index)
                 {
-                    slot.slotHightlight.gameObject.SetActive(true);
+                    slot.slotHighlight.gameObject.SetActive(true);
                 }
                 else
                 {
                     slot.isSelected = false;
-                    slot.slotHightlight.gameObject.SetActive(false);
+                    slot.slotHighlight.gameObject.SetActive(false);
                 }
             }
         }

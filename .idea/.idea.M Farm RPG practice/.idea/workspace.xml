@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218306f9-b79d-41b3-ab9f-25c4a382e9b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/UI/SlotHighlight.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/UI/SlotHighlight.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animations/UI/slothighlight.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/M Studio/Animations/UI/slothighlight.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M Studio/Animations/UI/slothightlight.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M Studio/Animations/UI/slothightlight.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M Studio/Animators/UI/SlotHighlight.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M Studio/Animators/UI/SlotHighlight.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory/Slot_Bag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory/Slot_Bag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/InventoryUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/SlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/UI/SlotUI.cs" afterDir="false" />
     </list>
