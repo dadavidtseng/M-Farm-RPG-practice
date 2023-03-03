@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 namespace MFarm.Inventory
 {
-    public class SlotUI : MonoBehaviour
+    public class SlotUI : MonoBehaviour, IPointerClickHandler
     {
         [Header("組件獲取")] 
         [SerializeField] private Image slotImage;
         [SerializeField] private TextMeshProUGUI amountText;
-        [SerializeField] private Image slotHightlight;
+        [SerializeField] public Image slotHightlight;
         [SerializeField] private Button button;
 
         [Header("格子類型")] 
@@ -20,6 +21,8 @@ namespace MFarm.Inventory
         //物品信息
         public ItemDetails itemDetails;
         public int itemAmount;
+
+        private InventoryUI inventoryUI => GetComponentInParent<InventoryUI>();
 
         private void Start()
         {
@@ -59,6 +62,17 @@ namespace MFarm.Inventory
             slotImage.enabled = false;
             amountText.text = string.Empty;
             button.interactable = false;
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (itemAmount == 0)
+            {
+                return;
+            }
+            isSelected = !isSelected;
+            
+            inventoryUI.UpdatesSlotHightlight(slotIndex);
         }
     }
 }
