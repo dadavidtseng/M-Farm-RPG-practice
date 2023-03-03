@@ -96,8 +96,38 @@ namespace MFarm.Inventory
         public void OnEndDrag(PointerEventData eventData)
         {
             inventoryUI.dragItem.enabled = false;
-            
-            Debug.Log(eventData.pointerCurrentRaycast.gameObject);
+            // Debug.Log(eventData.pointerCurrentRaycast.gameObject);
+
+            if (eventData.pointerCurrentRaycast.gameObject != null)
+            {
+                if (eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>() == null)
+                {
+                    return;
+                }
+
+                var targetSlot = eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>();
+                int targetIndex = targetSlot.slotIndex;
+
+                //在Player自身背包範圍內交換
+                if (slotType == SlotType.Bag && targetSlot.slotType == SlotType.Bag)
+                {
+                    InventoryManager.Instance.SwapItem(slotIndex, targetIndex);
+                }
+                
+                //清空所有高亮顯示
+                inventoryUI.UpdatesSlotHighlight(-1);   //測試扔在地上
+            }
+            else   //測試扔在地上
+            {
+                if (itemDetails.canDropped)
+                {
+                    //屬標對應世界地圖座標
+                    var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
+                        -Camera.main.transform.position.z));
+                
+                    EventHandler.CallInstantiateItemInScene(itemDetails.itemID, pos);
+                }
+            }
         }
     }
 }
