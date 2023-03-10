@@ -6,6 +6,7 @@ namespace MFarm.Transition
 {
     public class TransitionManager : MonoBehaviour
     {
+        [SceneName]
         public string startSceneName = string.Empty;
 
         private void OnEnable()
