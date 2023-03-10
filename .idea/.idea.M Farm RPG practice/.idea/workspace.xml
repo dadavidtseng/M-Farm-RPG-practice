@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="218306f9-b79d-41b3-ab9f-25c4a382e9b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Transition.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Transition/TransitionManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Transition/TransitionManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tilemaps/Tiles/Rule Tiles/Fire 1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tilemaps/Tiles/Rule Tiles/Fire 1.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.M Farm RPG practice/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Time/Logic/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Time/Logic/TimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/M Studio/Colourful Hierarchy Category GameObject/Color Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/M Studio/Colourful Hierarchy Category GameObject/Color Palette.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01.Field.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01.Field.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02.Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/02.Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersistentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Template.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Template.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/EventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Palettes/Furniture.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Palettes/Furniture.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +42,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/TriggerItemFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Time/Logic/TimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Time/UI/TimeUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transition/Teleport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transition/TransitionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/DataCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Enums.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/EventHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,7 +142,7 @@
       <workItem from="1677516313669" duration="3978000" />
       <workItem from="1677673571294" duration="5635000" />
       <workItem from="1677728249249" duration="3191000" />
-      <workItem from="1678376860231" duration="4312000" />
+      <workItem from="1678376860231" duration="7555000" />
     </task>
     <servers />
   </component>
