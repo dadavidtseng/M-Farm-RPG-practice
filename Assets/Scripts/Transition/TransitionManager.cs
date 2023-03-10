@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +6,7 @@ namespace MFarm.Transition
 {
     public class TransitionManager : MonoBehaviour
     {
-        public string startScneeName = string.Empty;
+        public string startSceneName = string.Empty;
 
         private void OnEnable()
         {
@@ -22,7 +20,7 @@ namespace MFarm.Transition
 
         private void Start()
         {
-            StartCoroutine(LoadSceneSetActive(startScneeName));
+            StartCoroutine(LoadSceneSetActive(startSceneName));
         }
         
         private void OnTransitionEvent(string sceneToGo, Vector3 positionToGo)
@@ -38,9 +36,15 @@ namespace MFarm.Transition
         /// <returns></returns>
         private IEnumerator Transition(string sceneName, Vector3 targetPosition)
         {
+            EventHandler.CallBeforeSceneUnloadEvent();
+            
             yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
 
             yield return LoadSceneSetActive(sceneName);
+            //移動人物座標
+            EventHandler.CallMoveToPosition(targetPosition);
+            
+            EventHandler.CallAfterSceneLoadedEvent();
         }
 
         /// <summary>

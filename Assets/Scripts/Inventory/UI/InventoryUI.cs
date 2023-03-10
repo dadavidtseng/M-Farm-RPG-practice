@@ -20,13 +20,15 @@ namespace MFarm.Inventory
         private void OnEnable()
         {
             EventHandler.UpdateInventoryUI += OnUpdateInventoryUI;
+            EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         }
 
         private void OnDisable()
         {
             EventHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
+            EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         }
-        
+
         private void Start()
         {
             //給每一個格子序號
@@ -44,6 +46,11 @@ namespace MFarm.Inventory
             {
                 OpenBagUI();
             }
+        }
+        
+        private void OnBeforeSceneUnloadEvent()
+        {
+            UpdatesSlotHighlight(-1);
         }
 
         private void OnUpdateInventoryUI(InventoryLocation location, List<InventoryItem> list)

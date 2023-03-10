@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class SwitchBounds : MonoBehaviour
 {
-    //TODO : 切換場景後更改調用
-    private void Start() 
+    private void OnEnable()
     {
-        SwitchConfinerShape();
+        EventHandler.AfterSceneLoadedEvent += SwitchConfinerShape;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.AfterSceneLoadedEvent -= SwitchConfinerShape;
     }
 
     private void SwitchConfinerShape()

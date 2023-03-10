@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77571c5a3e10b41b36e0589981722d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScneeName: 02.Home
+  startSceneName: 02.Home
 --- !u!4 &1831742057
 Transform:
   m_ObjectHideFlags: 0
